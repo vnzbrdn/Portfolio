@@ -247,8 +247,9 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <!-- AI & Programming -->
-              <img src="aidev.png" alt="Portfolio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                  <span class="absolute top-4 left-4 px-2.5 py-1 rounded-md bg-slate-900/70 text-white text-[11px] font-semibold"></span>
+             <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200/70 dark:border-slate-800">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
                   <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200">AI & Programming</h4>
                 </div>
                 <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-400">
@@ -494,14 +495,12 @@
 
       grid.innerHTML = filtered.map(item => `
         <article class="group rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
-          <div class="h-44 bg-gradient-to-br ${item.gradient} p-6 flex flex-col justify-between text-white relative overflow-hidden">
-            <span class="self-start px-2.5 py-1 rounded-md bg-white/20 backdrop-blur-xs text-[11px] font-semibold">
-              ${item.categoryLabel}
-            </span>
-            <p class="text-2xl font-extrabold tracking-tight opacity-90 group-hover:scale-105 transition-transform origin-left">
-              ${item.badge}
-            </p>
-          </div>
+          <div class="h-44 relative overflow-hidden bg-slate-200 dark:bg-slate-800">
+       <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+       <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-900/75 text-white text-[11px] font-semibold">
+         ${item.categoryLabel}
+       </span>
+     </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
               <h3 class="text-lg font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">${item.title}</h3>
